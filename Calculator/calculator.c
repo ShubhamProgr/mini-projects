@@ -27,16 +27,20 @@ int main() {
             scanf("%lf %lf", &num1, &num2);
 
             switch (operator) {
-                case 'A' || 'a':
+                case 'A':
+                case 'a':
                     printf("Result: %.2lf", num1 + num2);
                     break;
-                case 'B' || 'b':
+                case 'B':
+                case 'b':
                     printf("Result: %.2lf", num1 - num2);
                     break;
-                case 'C' || 'c':
+                case 'C':
+                case 'c':
                     printf("Result: %.2lf", num1 * num2);
                     break;
-                case 'D' || 'd':
+                case 'D':
+                case 'd':
                     if (num2 != 0) {
                         printf("Result: %.2lf", num1 / num2);
                     } else {
@@ -47,37 +51,33 @@ int main() {
                     printf("Error! Invalid operator for this mode.");
                     break;
             }
-            break; // End of case 1
-
+        
         case 2:
-            // --- Advanced Mode Logic ---
-            printf("\nEnter an advanced operator (Power(^), Modulus(%%)): ");
+            printf("\nAdvanced Operations Mode");
+            printf("-------------------------------------\n");
+            printf("\nA. Power");
+            printf("\nB. Modulus");
+            printf("\nEnter your choice : ");
             scanf(" %c", &operator);
 
             printf("Enter two numbers: ");
             scanf("%lf %lf", &num1, &num2);
-
-            // The switch for operators is now directly inside case 2
             switch (operator) {
-                case '^': // For power, e.g., 2 ^ 3 = 8
+                case 'A':
+                case 'a':
                     printf("Result: %.2lf", pow(num1, num2));
                     break;
-                case '%': // For modulus (remainder)
-                    if ((int)num2 != 0) {
-                         // Note: Modulus requires integers
-                         printf("Result (as integers): %d", (int)num1 % (int)num2);
+                case 'B':
+                case 'b':
+                    if (num2 != 0) {
+                        printf("Result: %.2lf", fmod(num1, num2));
                     } else {
-                         printf("Error! Division by zero in modulus.");
+                        printf("Error! Division by zero.");
                     }
                     break;
                 default:
-                    printf("Error! Invalid operator for this mode.");
+                    printf("\nError! Invalid mode selected.");
                     break;
-            }
-            break; 
-        default:
-            printf("\nError! Invalid mode selected.");
-            break;
     }
 
     printf("\n\nPress any key to exit...");

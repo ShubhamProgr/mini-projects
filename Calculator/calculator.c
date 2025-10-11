@@ -99,7 +99,18 @@ switch (mode) {
 
             case 'B':
             case 'b': 
-             
+                printf("Enter the number you want factorial of: ");
+                scanf("%lf", &num1);
+                if (num1 < 0) {
+                    printf("Error! Factorial is not defined for negative numbers or non-integers.");
+                } else {
+                    double factorial = 1;
+                    for (int i = 1; i <= (int)num1; i++) {
+                        factorial *= i;
+                    }
+                    printf("Result: %.0lf", factorial);
+                }
+
             default:
                 printf("Error! Invalid operator for this mode.");
                 break;

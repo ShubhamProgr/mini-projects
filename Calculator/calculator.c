@@ -23,6 +23,7 @@ switch (mode) {
         printf("D. Division\n");
         printf("E. Power\n");
         printf("F. Remainder\n");
+        printf("G. Square root\n");
 
         printf("\nEnter your choice : ");
         scanf(" %c", &operator);
@@ -71,24 +72,9 @@ switch (mode) {
                 }
                 break;
 
-            default:
-                printf("Error! Invalid operator for this mode.");
-                break;
-        }
-    
-    case 2:
-        printf("\nAdvanced Operations Mode");
-        printf("\n-------------------------------------");
-        printf("A. Square Root\n");
-        printf("B. Factorial\n");
-        
-        printf("\nEnter your choice : ");
-        scanf(" %c", &operator);
-
-        switch (operator) {
-            case 'A':
-            case 'a':
-                printf("Enter a number: ");
+            case 'G':
+            case 'g':
+                               printf("Enter a number: ");
                 scanf("%lf", &num1);
                 if (num1 >= 0) {
                     printf("Result: %.2lf", sqrt(num1));
@@ -97,8 +83,23 @@ switch (mode) {
                 }
                 break;
 
-            case 'B':
-            case 'b': 
+            default:
+                printf("Error! Invalid operator for this mode.");
+                break;
+        }
+    
+    case 2:
+        printf("\nAdvanced Operations Mode");
+        printf("\n-------------------------------------");
+        printf("A. Factorial\n");
+        printf("B. \n");
+        
+        printf("\nEnter your choice : ");
+        scanf(" %c", &operator);
+
+        switch (operator) {
+            case 'A':
+            case 'a':
                 printf("Enter the number you want factorial of: ");
                 scanf("%lf", &num1);
                 if (num1 < 0) {
@@ -111,6 +112,9 @@ switch (mode) {
                     printf("Result: %.0lf", factorial);
                 }
 
+            case 'B':
+            case 'b': 
+
             default:
                 printf("Error! Invalid operator for this mode.");
                 break;
@@ -120,7 +124,7 @@ default:
     printf("Error! Invalid operator choice.");
     break;
 
-printf("\nPress any key to exit...");
+printf("\nPress any key to exit");
 return 0;
 
 }

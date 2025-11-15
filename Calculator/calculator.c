@@ -6,51 +6,69 @@ int mode;
 char operator;
 double num1, num2;
 
-printf("Select Calculator Mode:\n");
-printf("1. Basic Arithmetic\n");
-printf("2. Advanced Operations\n");
-printf("-------------------------------------\n");
-printf("Enter your choice : ");
+printf("\n-------------------------------------");
+printf("\nSelect Calculator Mode:");
+printf("\n-------------------------------------");
+printf("\n1. Basic Arithmetic");
+printf("\n2. Advanced Operations");
+printf("\n3. Matrix");
+printf("\n4. Exit");
+printf("\n-------------------------------------");
+printf("\nEnter your choice : ");
 scanf("%d", &mode);
+printf("\n-------------------------------------");
 
 switch (mode) {
     case 1:
+        printf("\n-------------------------------------");
         printf("\n Basic Arithmetic Mode ");
-        printf("-------------------------------------\n");
-        printf("A. Addition\n");
-        printf("B. Subtraction\n");
-        printf("C. Multiplication\n");
-        printf("D. Division\n");
-        printf("E. Power\n");
-        printf("F. Remainder\n");
-        printf("G. Square root\n");
-
+        printf("\n-------------------------------------");
+        printf("\nA. Addition");
+        printf("\nB. Subtraction");
+        printf("\nC. Multiplication");
+        printf("\nD. Division");
+        printf("\nE. Power");
+        printf("\nF. Remainder");
+        printf("\nG. Square root");
+        printf("\n-------------------------------------");
         printf("\nEnter your choice : ");
         scanf(" %c", &operator);
-
-        printf("Enter first operand : ");
-        scanf("%lf", &num1);
-        printf("Enter second operand : ");
-        scanf("%lf",&num2);
+        printf("\n-------------------------------------");
 
         switch (operator) {
             case 'A':
             case 'a':
+                printf("\nEnter first operand : ");
+                scanf("%lf",&num1);
+                printf("\nEnter second operand : ");
+                scanf("%lf",&num2);
                 printf("Result: %.2lf", num1 + num2);
                 break;
 
             case 'B':
             case 'b':
+                printf("\nEnter first operand : ");
+                scanf("%lf",&num1);
+                printf("\nEnter second operand : ");
+                scanf("%lf",&num2);  
                 printf("Result: %.2lf", num1 - num2);
                 break;
 
             case 'C':
             case 'c':
+                printf("\nEnter first operand : ");
+                scanf("%lf",&num1);
+                printf("\nEnter second operand : ");
+                scanf("%lf",&num2);
                 printf("Result: %.2lf", num1 * num2);
                 break;
 
             case 'D':
             case 'd':
+                printf("\nEnter first operand : ");
+                scanf("%lf",&num1);
+                printf("\nEnter second operand : ");
+                scanf("%lf",&num2);
                 if (num2 != 0) {
                     printf("Result: %.2lf", num1 / num2);
                 } else {
@@ -60,11 +78,19 @@ switch (mode) {
 
             case 'E':
             case 'e':
+                printf("\nEnter the base : ");
+                scanf("%lf",&num1);
+                printf("\nEnter the power : ");
+                scanf("%lf",&num2);
                 printf("Result: %.2lf", pow(num1, num2));
                 break;
 
             case 'F':
             case 'f':
+                printf("\nEnter first operand : ");
+                scanf("%lf",&num1);
+                printf("\nEnter second operand : ");
+                scanf("%lf",&num2);
                 if (num2 != 0) {
                     printf("Result: %.2lf", fmod(num1, num2));
                 } else {
@@ -74,7 +100,7 @@ switch (mode) {
 
             case 'G':
             case 'g':
-                               printf("Enter a number: ");
+                printf("\nSquare root of : ");
                 scanf("%lf", &num1);
                 if (num1 >= 0) {
                     printf("Result: %.2lf", sqrt(num1));
@@ -89,13 +115,15 @@ switch (mode) {
         }
     
     case 2:
+        printf("\n-------------------------------------");
         printf("\nAdvanced Operations Mode");
         printf("\n-------------------------------------");
-        printf("A. Factorial\n");
-        printf("B. \n");
-        
+        printf("\nA. Factorial");
+        printf("\nB.");
+        printf("\n-------------------------------------");
         printf("\nEnter your choice : ");
         scanf(" %c", &operator);
+        printf("\n-------------------------------------");
 
         switch (operator) {
             case 'A':
@@ -120,11 +148,15 @@ switch (mode) {
                 break;
 
             }
+
+    case 3:
+        break;
+    case 4:
+        break;
 default:
     printf("Error! Invalid operator choice.");
     break;
 
-printf("\nPress any key to exit");
 return 0;
 
 }

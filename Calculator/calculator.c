@@ -1,10 +1,21 @@
 #include <stdio.h>
 #include <math.h> 
 
-int main() {
 int mode;
 char operator;
 double num1, num2;
+
+sum(num1,num2) {
+
+    printf("\nEnter first operand : ");
+    scanf("%lf",&num1);
+    printf("\nEnter second operand : ");
+    scanf("%lf",&num2);
+    printf("Result: %.2lf", num1 + num2);
+
+}
+
+int main() {
 
 printf("\n-------------------------------------");
 printf("\nSelect Calculator Mode:");
@@ -38,11 +49,7 @@ switch (mode) {
         switch (operator) {
             case 'A':
             case 'a':
-                printf("\nEnter first operand : ");
-                scanf("%lf",&num1);
-                printf("\nEnter second operand : ");
-                scanf("%lf",&num2);
-                printf("Result: %.2lf", num1 + num2);
+                sum(num1,num2);
                 break;
 
             case 'B':
@@ -151,6 +158,7 @@ switch (mode) {
 
     case 3:
         break;
+
     case 4:
         break;
 default:
